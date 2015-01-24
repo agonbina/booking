@@ -12,6 +12,7 @@
     "jade": "^1.7.0"
   },
   "dependencies": {
+    "sortablejs": "^1.0.0",
     "vue": "0.11.4",
     "vueui-transitions": "^0.1.0"
   }
