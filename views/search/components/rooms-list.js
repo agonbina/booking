@@ -23,6 +23,12 @@ module.exports = {
         }
     },
 
+    computed: {
+        filters: function () {
+            return this.$parent.$.filters.$data
+        }
+    },
+
     methods: {
         refresh: function (date) {
             var vm = this
@@ -30,7 +36,7 @@ module.exports = {
             /*require('superagent')
                 .post('https://challenges.1aim.com/roombooking/getrooms')
                 .set('Content-Type', 'application/json')
-                .withCredentials() // Enables CORS requests
+                .withCredentials()
                 .send(JSON.stringify({ date: 'today' }))
                 .end(function (res) {
                     console.log(res)
@@ -38,10 +44,9 @@ module.exports = {
 
             vm.isLoading = true
             setTimeout(function () {
-                vm.rooms = require('./rooms.json')
-
                 console.log('Retrieving rooms for: ', moment(date).unix())
 
+                vm.rooms = require('./rooms.json')
                 vm.isLoading = false
             }, 1000)
         }

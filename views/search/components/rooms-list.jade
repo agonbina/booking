@@ -6,7 +6,7 @@
             .sub.header All the available rooms
 
     .ui.four.doubling.cards
-        .card(v-repeat="rooms" v-transition="fade")
+        .card(v-repeat="rooms | filterBy filters.roomName in 'name'" v-transition="fade")
             .content
                 .header {{name}}
                 .meta
