@@ -4,16 +4,21 @@
   "private": true,
   "author": "Agon Bina <agon_bina@hotmail.com>",
   "devDependencies": {
-    "webpack": "^1.4.10",
+    "bower-webpack-plugin": "^0.1.5",
     "css-loader": "^0.9.0",
-    "style-loader": "^0.8.1",
-    "jade-html-loader": "0.0.2",
     "html-loader": "^0.2.3",
-    "jade": "^1.7.0"
+    "jade": "^1.7.0",
+    "jade-html-loader": "0.0.2",
+    "json-loader": "^0.5.1",
+    "style-loader": "^0.8.1",
+    "webpack": "^1.4.10"
   },
   "dependencies": {
     "101": "^0.8.2",
+    "moment": "^2.9.0",
+    "moment-timezone": "^0.3.0",
     "sortablejs": "^1.0.0",
+    "superagent": "^0.21.0",
     "vue": "0.11.4",
     "vueui-transitions": "^0.1.0"
   }

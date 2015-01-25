@@ -1,0 +1,25 @@
+.ui.attached.raised.segment(v-class="loading: isLoading")
+
+    h3.ui.header
+        i.settings.icon
+        .content Rooms
+            .sub.header All the available rooms
+
+    .ui.four.doubling.cards
+        .card(v-repeat="rooms" v-transition="fade")
+            .content
+                .header {{name}}
+                .meta
+                    span {{location}}
+
+            .image: img(v-attr="src: 'https://challenges.1aim.com/roombooking/' + images[0]")
+
+            .extra.content
+                .left.floated
+                    i.users.icon
+                    | {{capacity}}
+                span.right.floated {{size}}
+
+            .ui.bottom.attached.inverted.blue.button
+                i.plus.icon
+                | Book
