@@ -7,14 +7,20 @@ module.exports = {
 
     data: function () {
         return {
-            members: ["Agon", "Jann"]
+            $draggableOptions: { group: 'members' },
+            members: ["Agon", "Jann", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Eleven"]
         }
     },
 
     template:
-        '<ul>' +
-            '<li v-repeat="members">{{$value}}</li>' +
-        '</ul>',
+        '<div class="ui large horizontal selection list">' +
+            '<div v-repeat="members" class="item">' +
+                '<img class="ui avatar image" src="https://pbs.twimg.com/profile_images/3340765613/a2786703b889aae5910044a043879fbc_bigger.jpeg">' +
+                '<div class="content">' +
+                    '<div class="header">{{$value}}</div>' +
+                '</div>' +
+            '</div>' +
+        '</div>',
 
     replace: true
 }

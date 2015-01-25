@@ -2,9 +2,14 @@
 .row
     .column
         .ui.raised.segment
-            h3.ui.header
+            h2.ui.header
                 i.users.icon
                 .content Attendees
-                    .sub.header Who is attending this meeting?
+                    .sub.header Who is attending this meeting? (Drag and drop members to the "Attending" box)
 
-            organization-members
+            .ui.segment
+                .ui.ribbon.label All members
+                organization-members(v-ref="organization")
+            .ui.segment
+                .ui.green.ribbon.label Attending
+                selected-members
