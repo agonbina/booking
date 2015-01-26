@@ -5,7 +5,7 @@
         .content Rooms
             .sub.header All the available rooms
 
-    .ui.three.doubling.cards
+    .ui.two.doubling.cards
         .card(v-repeat="rooms | filterBy filters.roomName in 'name'" v-transition="fade")
             .content
                 .header {{name}}
@@ -18,6 +18,10 @@
             .image: img(v-attr="src: 'https://challenges.1aim.com/roombooking/' + images[0]")
 
             .content
+                //.header Availability
+                .description
+                    ui-timebar
+                .header Equipment
                 .description
                     .ui.divided.horizontal.list
                         .item(v-repeat="equipment"): .content {{$value}}

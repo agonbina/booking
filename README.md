@@ -8,6 +8,14 @@ The application consists of three different views that each deal with a piece of
 * [Search](/views/search) Here the user may search for the available rooms.
 * [Book Room](/views/book-room) This is the view where the user can finalize a booking after they have selected a room.
 
+##### [Availability time bar](/views/search/components/) ```timebar.js and timebar.jade```
+The availability for a room is expressed using interval blocks("from" -> "to") green bars. I intentionally omitted
+visualising the time when a room is not available with red because:
+  * Save some real estate in the room card
+  * More numbers might just confuse the user, as they only care about "when is the room available"
+
+A future enhancement would be making the width of an interval block relative to the length of that interval, so for
+example the bar for "7:00 - 9:00" would be smaller than the bar for "11:00 - 19:00"
 
 ### Third party libraries
 

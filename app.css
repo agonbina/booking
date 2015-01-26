@@ -1,0 +1,39 @@
+.time-bar {
+    overflow: hidden;
+}
+
+/* Time bar wrapper which holds the from and to labels and the bar itself */
+
+.bar-wrap {
+    float: left;
+    width: 0;
+}
+.bar-wrap label {
+    font-size: 0.8em;
+    color: #8a8a8a;
+    margin: 0 0 2px 0;
+    display: block;
+}
+.bar-wrap label.end {
+    float: right;
+    margin-right: 5%;
+}
+
+
+/* bar */
+
+.bar-wrap .bar {
+    height: 20px;
+    width: 95%;
+}
+.bar-wrap .bar.green {
+    background-color: #61c471;
+    border-bottom: 3px solid #42b054;
+}
+.bar-wrap .bar.red {
+    background-color: #c46161;
+    border-bottom: 3px solid #b04242;
+}
+.bar-wrap .bar:after {
+    color: #FFF;
+}
