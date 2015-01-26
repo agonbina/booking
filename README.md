@@ -42,5 +42,5 @@ webpack
 npm install -g http-server
 
 // Run it
-http-server --cors -o
+http-server -o
 ```
