@@ -18,17 +18,16 @@
             .image: img(v-attr="src: 'https://challenges.1aim.com/roombooking/' + images[0]")
 
             .content
-                //.header Availability
                 .description
                     ui-timebar
                 .header Equipment
                 .description
-                    .ui.divided.horizontal.list
-                        .item(v-repeat="equipment"): .content {{$value}}
+                    .ui.horizontal.list
+                        .item(v-repeat="equipment"): .ui.label {{$value}}
 
             .extra.content
                 span.right.floated {{size}}
 
-            .ui.bottom.attached.inverted.blue.button
+            .ui.bottom.attached.inverted.blue.button(v-on="click: startBooking($index)")
                 i.plus.icon
                 | Book

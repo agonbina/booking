@@ -1,10 +1,12 @@
 
-var moment = require('moment-timezone')
+var moment = require('moment-timezone'),
+    not = require('101/not'),
+    isString = require('101/is-string')
 
 module.exports = {
 
     beforeCompile: function () {
-        this.refresh(new Date())
+        this.refresh('today')
     },
 
     compiled: function () {
@@ -33,22 +35,22 @@ module.exports = {
         refresh: function (date) {
             var vm = this
 
-            /*require('superagent')
-                .post('https://challenges.1aim.com/roombooking/getrooms')
-                .set('Content-Type', 'application/json')
-                .withCredentials()
-                .send(JSON.stringify({ date: 'today' }))
-                .end(function (res) {
-                    console.log(res)
-                })*/
+            if(date !== 'today') {
+                date = moment(date).unix()
+            }
 
             vm.isLoading = true
-            setTimeout(function () {
-                console.log('Retrieving rooms for: ', moment(date).unix())
+            require('superagent')
+                .post('https://challenges.1aim.com/roombooking/getrooms')
+                .send(JSON.stringify({ date: date }))
+                .end(function (res) {
+                    vm.rooms = res.body
+                    vm.isLoading = false
+                })
+        },
 
-                vm.rooms = require('./rooms.json')
-                vm.isLoading = false
-            }, 1000)
+        startBooking: function (index) {
+            this.$root.$emit('room:selected', this.rooms[index])
         }
     },
 
