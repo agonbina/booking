@@ -23,7 +23,17 @@ Vue.use(require('./views/search'))
  */
 
 window.app = new Vue({
+
+    events: {
+        'room:selected': function (room) {
+            this.selectedRoom = room
+            this.currentView = 'ui-book-room'
+        }
+    },
+
     data: {
-        name: 'LightLock'
+        currentView: 'ui-search',
+        selectedRoom: {}
     }
+
 }).$mount('#app')

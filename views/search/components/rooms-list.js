@@ -1,5 +1,6 @@
 
-var moment = require('moment-timezone'),
+var Vue = require('vue'),
+    moment = require('moment-timezone'),
     not = require('101/not'),
     isString = require('101/is-string')
 
@@ -45,7 +46,10 @@ module.exports = {
                 .send(JSON.stringify({ date: date }))
                 .end(function (res) {
                     vm.rooms = res.body
-                    vm.isLoading = false
+
+                    Vue.nextTick(function () {
+                        vm.isLoading = false
+                    })
                 })
         },
 

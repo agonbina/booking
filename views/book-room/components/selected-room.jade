@@ -1,0 +1,7 @@
+.row: .column: .ui.raised.segment
+    h3.ui.header Selected Room: {{room.name}}
+        .sub.header Location: {{room.location}}
+
+    a.ui.ribbon.red.icon.label(v-on="click: this.$root.currentView = 'ui-search'")
+        i.chevron.left.icon
+        | Change

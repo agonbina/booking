@@ -1,9 +1,9 @@
 .ui.raised.top.attached.segment.grid
-    .column
-        a.ui.basic.icon.button(v-on="click: previous")
+    .column(v-on="click: previous")
+        a.ui.basic.icon.button
             i.angle.left.icon
     .fourteen.wide.column
         h1.ui.center.aligned.header {{date}}
-    .column
-        a.ui.basic.icon.button(v-on="click: next")
+    .column(v-on="click: next")
+        a.ui.basic.icon.button
             i.angle.right.icon
