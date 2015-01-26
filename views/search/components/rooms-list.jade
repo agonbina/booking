@@ -5,12 +5,15 @@
         .content Rooms
             .sub.header All the available rooms
 
-    .ui.two.doubling.cards
+    .ui.three.doubling.cards
         .card(v-repeat="rooms | filterBy filters.roomName in 'name'" v-transition="fade")
             .content
                 .header {{name}}
                 .meta
                     span {{location}}
+                    .right.floated
+                        i.users.icon
+                        | {{capacity}}
 
             .image: img(v-attr="src: 'https://challenges.1aim.com/roombooking/' + images[0]")
 
@@ -20,9 +23,6 @@
                         .item(v-repeat="equipment"): .content {{$value}}
 
             .extra.content
-                .left.floated
-                    i.users.icon
-                    | {{capacity}}
                 span.right.floated {{size}}
 
             .ui.bottom.attached.inverted.blue.button
