@@ -2,6 +2,18 @@
     h3.ui.header Selected Room: {{room.name}}
         .sub.header Location: {{room.location}}
 
-    a.ui.ribbon.red.icon.label(v-on="click: this.$root.currentView = 'ui-search'")
+    a.ui.right.ribbon.red.icon.label(v-on="click: this.$root.currentView = 'ui-search'")
         i.chevron.left.icon
         | Change
+
+    h4.ui.header Images
+    .ui.doubling.fluid.cards
+        .card(v-repeat="room.images"): .image
+            img(v-attr="src: 'https://challenges.1aim.com/roombooking/' + $value")
+
+    h4.ui.header Equipment
+    .ui.horizontal.list
+        .item(v-repeat="room.equipment"): .ui.label {{$value}}
+
+    h4.ui.header Availability
+    ui-timebar
