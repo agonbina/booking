@@ -23,6 +23,18 @@ module.exports = {
                 vm.minute = value
             }
         })
+    },
+
+    methods: {
+        resetH: function () {
+            this.$hour.dropdown('restore defaults')
+            this.hour = ''
+        },
+
+        resetM: function () {
+            this.$minute.dropdown('restore defaults')
+            this.minute = ''
+        }
     }
 
 }

@@ -53,8 +53,7 @@ module.exports = {
             this.$parent.$set('start.hour', hour)
 
             // Reset 'minute' when the 'hour' changes
-            this.$minute.dropdown('restore defaults')
-            this.minute = ''
+            this.resetM()
         },
         minute: function (min) {
             this.$parent.$set('start.minute', min)
