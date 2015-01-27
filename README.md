@@ -18,6 +18,11 @@ A future enhancement would be making the width of an interval block relative to 
 example the bar for "7:00 - 9:00" would be smaller than the bar for "11:00 - 19:00"(Note: I did attempt to implement this
 here: http://jsfiddle.net/hsrq9w7q/1/embedded/result/ but it wasn't perfect enough so I left it out)
 
+### Known issues
+* When dragging members from "All members" to "Attending" or vice versa, make sure to have at least one member in each
+    list at all times
+* Not suggested to attempt hitting "Create Event" again right after it completes for the first time
+
 ### Third party libraries
 
 * [Semantic UI](http://semantic-ui.com/) I really like all the modules and the syntax that Semantic UI has developed.
