@@ -1,0 +1,19 @@
+form.ui.fluid.form.stacked.segment(v-class="loading: isLoading")
+    a.ui.right.red.big.corner.label(v-on="click: $parent.isAddingMember = false")
+        i.remove.icon
+
+    .two.fields
+        .required.field
+            label Name
+            input(type="text" name="name" placeholder="Full Name" v-model="name")
+
+        .required.field
+            label Email
+            input(type="text" name="email" placeholder="ex. john@gmail.com" v-model="email")
+
+    .required.field
+        label Phone Number
+        input(type="text" name="number" placeholder="49 (30) xxx - xxxx" v-model="number")
+
+    .field
+        .ui.blue.submit.button Create

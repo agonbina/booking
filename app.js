@@ -33,7 +33,16 @@ window.app = new Vue({
 
     data: {
         currentView: 'ui-search',
-        selectedRoom: {}
+        selectedRoom: {},
+        members: [{
+            name: 'Agon',
+            email: 'agon_bina@hotmail.com',
+            number: '38971967828'
+        }, {
+            name: 'Yann',
+            email: 'work@1aim.com',
+            number: '38971967828'
+        }]
     }
 
 }).$mount('#app')

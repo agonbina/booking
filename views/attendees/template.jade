@@ -9,7 +9,14 @@
 
             .ui.segment
                 .ui.ribbon.label All members
+                a.ui.right.green.massive.corner.label(v-show="!isAddingMember" v-on="click: isAddingMember = true")
+                    i.plus.icon
                 ui-organization-members
+
+            .ui.grid(v-if="isAddingMember" v-transition="fade-down")
+                .column
+                    ui-add-member
+
             .ui.segment
                 .ui.green.ribbon.label Attending
                 ui-selected-members

@@ -1,22 +1,18 @@
-
 var draggableMixin = require('../mixins/draggable-mixin')
 
 module.exports = {
 
-    mixins: [ draggableMixin ],
+    mixins: [draggableMixin],
 
     data: function () {
         return {
-            $draggableOptions: { group: 'members' },
-            members: [{
-                name: 'Agon',
-                email: 'agon_bina@hotmail.com',
-                phone: ''
-            }, {
-                name: 'Yann',
-                email: 'work@1aim.com',
-                phone: ''
-            }]
+            $draggableOptions: {group: 'members'}
+        }
+    },
+
+    computed: {
+        members: function () {
+            return this.$root.members
         }
     },
 
