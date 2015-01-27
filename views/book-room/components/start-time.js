@@ -22,7 +22,7 @@ module.exports = {
 
         availability.forEach(function (interval) {
             var next = interval[0],
-                end = interval[1]
+                end = interval[1].subtract(15, 'm') // Event has to end at least 15 minutes before this interval completes
 
             while(next.isBefore(end) || next.isSame(end)) {
                 var hour = parseInt(next.format('HH')),
