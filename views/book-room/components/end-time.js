@@ -62,12 +62,9 @@ module.exports = {
 
             if(min) {
                 var bookingInterval = availability[0],
-                    begin = bookingInterval[0],
                     matrix = {}
 
-                if(not(start.isSame(begin)) && start.isAfter(begin)) {
-                    bookingInterval[0] = start.add(15, 'm')
-                }
+                bookingInterval[0] = start.add(15, 'm')
 
                 var next = bookingInterval[0],
                     end = bookingInterval[1]
