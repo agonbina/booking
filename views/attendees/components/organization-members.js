@@ -1,5 +1,5 @@
 
-var draggableMixin = require('../../../helpers').draggableMixin
+var draggableMixin = require('../mixins/draggable-mixin')
 
 module.exports = {
 
@@ -8,19 +8,19 @@ module.exports = {
     data: function () {
         return {
             $draggableOptions: { group: 'members' },
-            members: ["Agon", "Jann", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Eleven"]
+            members: [{
+                name: 'Agon',
+                email: 'agon_bina@hotmail.com',
+                phone: ''
+            }, {
+                name: 'Yann',
+                email: 'work@1aim.com',
+                phone: ''
+            }]
         }
     },
 
-    template:
-        '<div class="ui large horizontal selection list">' +
-            '<div v-repeat="members" class="item">' +
-                '<img class="ui avatar image" src="https://pbs.twimg.com/profile_images/3340765613/a2786703b889aae5910044a043879fbc_bigger.jpeg">' +
-                '<div class="content">' +
-                    '<div class="header">{{$value}}</div>' +
-                '</div>' +
-            '</div>' +
-        '</div>',
+    template: require('./organization-members.jade'),
 
     replace: true
 }

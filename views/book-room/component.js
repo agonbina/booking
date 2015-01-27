@@ -36,6 +36,10 @@ module.exports = {
                     return moment({ hour: frame[0], minute: frame[1] })
                 })
             })
+        },
+
+        passes: function () {
+            return this.$.attendees.list
         }
 
     },

@@ -1,10 +1,15 @@
 
 module.exports = {
 
+    data: function () {
+        return {
+            list: []
+        }
+    },
 
     components: {
-        'organization-members': require('./components/organization-members'),
-        'selected-members': require('./components/selected-members')
+        'ui-organization-members': require('./components/organization-members'),
+        'ui-selected-members': require('./components/selected-members')
     },
 
     template: require('./template.jade'),

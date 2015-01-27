@@ -1,5 +1,5 @@
 
-var draggableMixin = require('../../../helpers').draggableMixin
+var draggableMixin = require('../mixins/draggable-mixin')
 
 module.exports = {
 
@@ -7,14 +7,21 @@ module.exports = {
 
     data: function () {
         return {
-            $draggableOptions: { group: 'members' }
+            $draggableOptions: {group: 'members'},
+            members: [{
+                name: 'Messi',
+                email: 'messi@agon.com'
+            }]
         }
     },
 
-    template:
-        '<div class="ui large relaxed horizontal selection list">' +
-            '<div class="item">One</div>' +
-        '</div>',
+    watch: {
+        members: function (members) {
+            this.$parent.$set('list', members)
+        }
+    },
+
+    template: require('./selected-members.jade'),
 
     replace: true
 }
