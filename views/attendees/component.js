@@ -4,7 +4,7 @@ module.exports = {
     data: function () {
         return {
             list: [],
-            isAddingMember: true
+            isAddingMember: false
         }
     },
 

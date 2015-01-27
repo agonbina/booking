@@ -12,6 +12,12 @@ module.exports = {
         }
     },
 
+    watch: {
+        date: function (date) {
+            this.$root.$set('selectedDate', date)
+        }
+    },
+
     methods: {
 
         previous: function () {

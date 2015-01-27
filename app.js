@@ -34,14 +34,15 @@ window.app = new Vue({
     data: {
         currentView: 'ui-search',
         selectedRoom: {},
+        selectedDate: new Date(),
         members: [{
             name: 'Agon',
             email: 'agon_bina@hotmail.com',
-            number: '38971967828'
+            number: '0038971967828'
         }, {
             name: 'Yann',
             email: 'work@1aim.com',
-            number: '38971967828'
+            number: '0038971967828'
         }]
     }
 

@@ -6,13 +6,17 @@ module.exports = {
 
     data: function () {
         return {
-            $draggableOptions: {group: 'members'},
+            $draggableOptions: { group: 'members' },
             members: [{
-                name: 'Messi',
-                email: 'messi@agon.com',
-                number: ''
+                name: 'Agon Bina',
+                email: 'gonigkum@gmail.com.com',
+                number: '38971967828'
             }]
         }
+    },
+
+    compiled: function () {
+        this.$parent.$set('list', this.members)
     },
 
     watch: {

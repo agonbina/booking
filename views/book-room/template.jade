@@ -9,4 +9,28 @@ ui-selected-room(v-ref="selectedRoom")
             ui-start-time
             ui-end-time
 
+            .ui.horizontal.header.divider
+                .ui.horizontal.label Event Title
+            .ui.fluid.input
+                input(type="text" placeholder="A short title ..." v-model="title")
+
+            .ui.horizontal.header.divider
+                .ui.horizontal.label Event Description
+            .ui.form: .field
+                textarea(placeholder="A longer description for this event ..." v-model="description")
+
 ui-attendees(v-ref="attendees")
+
+.row(v-if="errors.length > 0" v-transition="fade-up")
+    .column
+        .ui.error.message
+            ul.list
+                li(v-repeat="errors") {{$value}}
+
+.row(v-if="eventCreated" v-transition="fade-up")
+    .column
+        .ui.success.message Cool stuff! Event was created and LightPasses were sent to the people attending this event.
+
+.centered.row
+    .column
+        .ui.huge.fluid.inverted.green.button(v-on="click: submit" v-class="loading: isSubmitting, disabled: isSubmitting") Create Event
