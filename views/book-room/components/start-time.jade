@@ -1,0 +1,16 @@
+.ui.horizontal.header.divider
+    .ui.blue.horizontal.label Start Time
+.ui.compact.selection.dropdown(v-el="hour")
+    .text hour
+    i.dropdown.icon
+    .menu
+        .item(v-repeat="availability") {{* $key}}
+
+i.minus.icon
+
+.ui.compact.selection.dropdown(v-el="minute")
+    input(type="hidden" name="minute")
+    .text minute
+    i.dropdown.icon
+    .menu
+        .item(v-repeat="minutes") {{* $value}}

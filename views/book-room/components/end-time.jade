@@ -1,0 +1,17 @@
+.ui.horizontal.header.divider
+    .ui.blue.horizontal.label End Time
+.ui.compact.selection.dropdown(v-el="hour" v-class="disabled: isDisabled")
+    .text hour
+    i.dropdown.icon
+    .menu
+        .item 17:00
+        .item 18:00
+
+i.minus.icon
+
+.ui.compact.selection.dropdown(v-el="minute" v-class="disabled: isDisabled")
+    .text minute
+    i.dropdown.icon
+    .menu
+        .item 00
+        .item 15
