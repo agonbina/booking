@@ -4,8 +4,7 @@
     .text hour
     i.dropdown.icon
     .menu
-        .item 17:00
-        .item 18:00
+        .item(v-repeat="availability") {{* $key}}
 
 i.minus.icon
 
@@ -13,5 +12,4 @@ i.minus.icon
     .text minute
     i.dropdown.icon
     .menu
-        .item 00
-        .item 15
+        .item(v-repeat="minutes") {{* $value}}
