@@ -15,13 +15,16 @@ visualising the time when a room is not available with red because:
   * More numbers might just confuse the user, as they only care about "when is the room available"
 
 A future enhancement would be making the width of an interval block relative to the length of that interval, so for
-example the bar for "7:00 - 9:00" would be smaller than the bar for "11:00 - 19:00"
+example the bar for "7:00 - 9:00" would be smaller than the bar for "11:00 - 19:00"(Note: I did attempt to implement this
+here: http://jsfiddle.net/hsrq9w7q/1/embedded/result/ but it wasn't perfect enough so I left it out)
 
 ### Third party libraries
 
 * [Semantic UI](http://semantic-ui.com/) I really like all the modules and the syntax that Semantic UI has developed.
 * [Vue.js](http://vuejs.org)
 * jQuery
+* [Sortable](https://github.com/RubaXa/Sortable) Used to implement the drag and drop feature in attendees
+* [moment.js](https://github.com/moment/moment/) Best library to mess around with dates
 
 ### Running the app
 
