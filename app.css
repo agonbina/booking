@@ -37,3 +37,16 @@
 .bar-wrap .bar:after {
     color: #FFF;
 }
+
+.ui.segment.members-draggable > .ui.ribbon.label {
+	position: absolute;
+	left: -1rem;
+}
+
+.ui.segment.members-draggable > .ui.horizontal.selection.list {
+	display: block;
+	min-height: 3.5rem;
+	margin-left:7rem;
+}
+	
+	

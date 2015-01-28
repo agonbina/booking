@@ -7,7 +7,7 @@
                 .content Attendees
                     .sub.header Who is attending this meeting? (Drag and drop members to the "Attending" box)
 
-            .ui.segment
+            .ui.segment.members-draggable
                 .ui.ribbon.label All members
                 a.ui.right.green.massive.corner.label(v-show="!isAddingMember" v-on="click: isAddingMember = true")
                     i.plus.icon
@@ -17,6 +17,6 @@
                 .column
                     ui-add-member
 
-            .ui.segment
+            .ui.segment.members-draggable
                 .ui.green.ribbon.label Attending
                 ui-selected-members
