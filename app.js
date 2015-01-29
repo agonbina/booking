@@ -40,10 +40,14 @@ window.app = new Vue({
             email: 'agon_bina@hotmail.com',
             number: '0038971967828'
         }, {
-            name: 'Yann',
-            email: 'work@1aim.com',
-            number: '0038971967828'
-        }]
+            name: 'Yann Leretaille',
+            email: 'yleretaille@googlemail.com',
+            number: '01715480984'
+        }, {
+	   name: 'Torben Friehe',
+	   email: 'tfriehe@gmail.com',
+	   number: '015122902112'
+	}]
     }
 
 }).$mount('#app')
