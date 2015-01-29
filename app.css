@@ -34,6 +34,10 @@
     background-color: #c46161;
     border-bottom: 3px solid #b04242;
 }
+.bar-wrap .bar.yellow {
+    background-color: #c4be1e;
+    border-bottom: 3px solid #817d14;
+}
 .bar-wrap .bar:after {
     color: #FFF;
 }

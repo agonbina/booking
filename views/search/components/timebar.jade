@@ -1,5 +1,5 @@
 
-.time-bar: .bar-wrap(v-repeat="availability" v-style="width: width + '%'")
-    label {{ $data[0] }}
-    .green.bar
-    label.end {{ $data[1] }}
+.time-bar: .bar-wrap(v-repeat="availability" v-style="width: width + '%'" v-transition="pulse")
+    label {{* interval[0].hour + ':' + interval[0].minute }}
+    .bar(v-class="green: isAvailable, yellow: !isAvailable")
+    label.end {{* interval[1].hour + ':' + interval[1].minute }}

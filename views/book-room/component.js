@@ -65,6 +65,19 @@ module.exports = {
         }
     },
 
+    watch: {
+        'start.minute': function (minute) {
+            var isValid = this.start.hour && this.start.minute
+
+            if(isValid) this.$broadcast('startTime:changed', this.start)
+        },
+        'end.minute': function (minute) {
+            var isValid = this.end.hour && this.end.minute
+
+            if(isValid) this.$broadcast('endTime:changed', this.end)
+        }
+    },
+
     computed: {
 
         room: function () {
