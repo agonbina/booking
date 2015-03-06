@@ -36,17 +36,20 @@ window.app = new Vue({
         selectedRoom: {},
         selectedDate: new Date(),
         members: [{
-            name: 'Agon',
-            email: 'agon_bina@hotmail.com',
-            number: '0038971967828'
+            name: 'Mike Hahm',
+            email: 'mike.hahm@konicaminolta.eu',
+            number: '015164954490',
+	    avatar: 'profile_imgs/mike.jpg'
         }, {
             name: 'Yann Leretaille',
-            email: 'yleretaille@googlemail.com',
-            number: '01715480984'
+            email: 'yl@1aim.com',
+            number: '01715480984',
+	    avatar: 'profile_imgs/one1.jpg'
         }, {
 	   name: 'Torben Friehe',
-	   email: 'tfriehe@gmail.com',
-	   number: '015122902112'
+	   email: 'tf@1aim.com',
+	   number: '015122902112',
+	   avatar: 'profile_imgs/one2.jpg'
 	}]
     }
 

@@ -38,7 +38,8 @@ module.exports = {
                 member = {
                     name: vm.name,
                     email: vm.email,
-                    number: vm.number
+                    number: vm.number,
+		    avatar: 'profile_imgs/one3.jpg'
                 }
 
             vm.isLoading = true

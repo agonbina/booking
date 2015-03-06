@@ -7,11 +7,7 @@ module.exports = {
     data: function () {
         return {
             $draggableOptions: { group: 'members' },
-            members: [{
-                name: 'Agon Bina',
-                email: 'gonigkum@gmail.com.com',
-                number: '38971967828'
-            }]
+            members: []
         }
     },
 
