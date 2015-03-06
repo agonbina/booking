@@ -53,4 +53,7 @@
 	margin-left:7rem;
 }
 	
-	
+.ui.cards>.card>.image {
+	padding-top: 65%;
+	background-size: cover;
+}

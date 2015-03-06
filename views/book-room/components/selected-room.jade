@@ -10,8 +10,7 @@
 
     h4.ui.header Images
     .ui.doubling.fluid.cards
-        .card(v-repeat="room.images"): .image
-            img(v-attr="src: 'https://challenges.1aim.com/roombooking/' + $value")
+        .card(v-repeat="room.images"): .image(v-attr="style: 'background-image:url(https://challenges.1aim.com/roombooking/' + $value + ')'")
 
     h4.ui.header Equipment
     .ui.horizontal.list
