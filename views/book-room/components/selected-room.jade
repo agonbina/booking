@@ -1,20 +1,23 @@
-.row: .column: .ui.raised.segment
-    h3.ui.header
-        i.home.icon
-        .content Selected Room: {{room.name}}
-        .sub.header Location: {{room.location}}
+.row: .column
+    .logo
+        img(v-attr="src: 'assets/img/oneaim_logo.png'")
+    .ui.raised.segment
+        h3.ui.header
+            i.home.icon
+            .content Selected Room: {{room.name}}
+            .sub.header Location: {{room.location}}
 
-    a.ui.right.ribbon.red.icon.label(v-on="click: this.$root.currentView = 'ui-search'")
-        i.chevron.left.icon
-        | Change
+        a.ui.right.ribbon.red.icon.label(v-on="click: this.$root.currentView = 'ui-search'")
+            i.chevron.left.icon
+            | Change
 
-    h4.ui.header Images
-    .ui.doubling.fluid.cards
-        .card(v-repeat="room.images"): .image(v-attr="style: 'background-image:url(https://challenges.1aim.com/roombooking/' + $value + ')'")
+        h4.ui.header Images
+        .ui.doubling.fluid.cards
+           .card(v-repeat="room.images"): .image(v-attr="style: 'background-image:url(https://challenges.1aim.com/roombooking/' + $value + ')'")
 
-    h4.ui.header Equipment
-    .ui.horizontal.list
-        .item(v-repeat="room.equipment"): .ui.label {{$value}}
+        h4.ui.header Equipment
+        .ui.horizontal.list
+           .item(v-repeat="room.equipment"): .ui.label {{$value}}
 
-    h4.ui.header Availability
-    ui-timebar
+        h4.ui.header Availability
+        ui-timebar

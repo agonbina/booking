@@ -1,3 +1,9 @@
+body {
+    background-color: rgba(255,255,255,1);
+    background-image: url(assets/img/bg.svg);
+    background-size: cover;
+}
+
 .time-bar {
     overflow: hidden;
 }
@@ -56,4 +62,21 @@
 .ui.cards>.card>.image {
 	padding-top: 65%;
 	background-size: cover;
+}
+
+.ui.segment  {
+	background: rgba(255,255,255,0.7);
+}
+.ui.cards>.card {
+	 background: rgba(255,255,255,0.4);
+}
+
+
+.logo {
+	text-align: center;
+	padding: 2em;
+}
+
+.logo > img {
+	width: 35%;
 }
